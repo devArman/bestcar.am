@@ -1,0 +1,102 @@
+@media only screen and (max-width: 1450px) {
+    .wrapper{
+        max-width: 90%;
+    }
+}
+@media only screen and (max-width: 1350px) {
+    .top-slider h2{
+        font-size: 40px;
+    }
+    .all-items .item:nth-child(-n+15) {
+        display: block!important;
+    }
+}
+@media only screen and (max-width: 1250px) {
+    .top-slider h2{
+        font-size: 35px;
+    }
+    .all-items .item:nth-child(-n+18) {
+        display: block!important;
+    }
+}
+@media only screen and (max-height: 800px) {
+    .slick-slide{
+        padding: 4% 0;
+    }
+}
+@media only screen and (max-width: 991px){
+    header .header-logo {
+        width: 90px;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    .services-section h3 {
+        font-size: 20px;
+    }
+    .item {
+        width: 47%;
+    }
+    #container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #filters li a{
+        font-size: 13px;
+    }
+    #filters li {
+        margin: 2px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .services-section .row .col-md-4{
+        margin-bottom: 10px;
+    }
+    .contact-form-box .row {
+        margin-bottom: 0;
+    }
+    .contact-form-box .row input.form-control,.checkbox-content,.contact-form-box .row textarea{
+        margin-bottom: 15px;
+    }
+    .item-overlay h2{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 670px) {
+    .wrapper {
+        max-width: 95%;
+    }
+    .top-menu li a{
+        font-size: 14px;
+    }
+    body .filter-content.all-items #container {
+        height: 900px!important;
+    }
+    .project-tags{
+        display: none;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .fp-section{
+        position: relative;
+    }
+    .header-blocks{
+        width: 100%;
+        text-align: center;
+    }
+    .header-blocks .justify-content-end {
+        -ms-flex-pack: justify!important;
+        justify-content: space-between!important;
+    }
+    header .header-logo{
+        margin-bottom: 10px;
+    }
+    .top-menu li a{
+        padding-left: 10px;
+    }
+    .top-slider h2{
+        font-size: 26px;
+        letter-spacing: -2px;
+    }
+
+}
