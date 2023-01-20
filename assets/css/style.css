@@ -67,7 +67,31 @@ input:-moz-placeholder,textarea:-moz-placeholder { /* Firefox 18- */
 .top-section-overlay{
     background-image: url("../images/banner-overlay.png");
     background-size: cover;
-    padding: 20px 0 60px 0;
+    padding: 80px 0 60px 0;
+    position: relative;
+    background-position: right;
+}
+.top-section-overlay header{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10px;
+    z-index: 2;
+}
+.top-section-overlay header.fixed-header{
+    position: fixed;
+    background-color: #001E4D;
+    padding: 10px 0;
+    top: 0;
+    z-index: 3;
+    -webkit-animation: smoothScroll 0.5s forwards;
+    /* Safari 4+ */
+    -moz-animation: smoothScroll 0.5s forwards;
+    /* Fx 5+ */
+    -o-animation: smoothScroll 0.5s forwards;
+    /* Opera 12+ */
+    animation: smoothScroll 0.5s forwards;
+    /* IE 10+, Fx 29+ */
 }
 .top-slider h2{
     color: #fff;
@@ -172,6 +196,8 @@ input:-moz-placeholder,textarea:-moz-placeholder { /* Firefox 18- */
     transition: all 1.3s cubic-bezier(.38,0,.32,1);
     transform: translateY(20vw) translateZ(0);
     transition-delay: 0s;
+    min-width: 192px;
+    text-align: center;
 }
 .get-in-touch-btn:hover{
     color: #fff;
@@ -571,6 +597,10 @@ body .filter-content.all-items #container{
     text-align: center;
     border-radius: 50%;
     color: #fff;
+    margin: 0 5px;
+}
+.upper-header .header-social-group a:last-child span{
+    margin-right: 0;
 }
 .upper-header li{
     margin-left: 10px;
@@ -583,7 +613,41 @@ body .filter-content.all-items #container{
     font-size: 1.5rem;
     color: #fff;
 }
+@-webkit-keyframes smoothScroll {
+    0% {
+        transform: translateY(-10px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
 
+@-moz-keyframes smoothScroll {
+    0% {
+        transform: translateY(-10px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+@-o-keyframes smoothScroll {
+    0% {
+        transform: translateY(-10px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-10px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
 
 @media only screen and (max-width: 767px) {
     .contact-form-box .col-md-6 {

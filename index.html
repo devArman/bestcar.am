@@ -22,8 +22,11 @@
                 <li><i class="fas fa-map-marker-alt"></i> <a href="https://yandex.ru/navi/?whatshere%5Bzoom%5D=18&whatshere%5Bpoint%5D=44.486298%2C40.199764&lang=us&from=navi" target="_blank"> Քեռու փողոց 35/156</a></li>
                 <li><i class="fas fa-phone"></i><a href="tel:033185050"> 033 18 50 50</a> </li>
                 <li><i class="fas fa-phone"></i><a href="tel:033175050"> 033 17 50 50</a> </li>
-                <li><a href="https://www.facebook.com/bestcarllcyerevan?mibextid=LQQJ4d" target="_blank"><span class="social-icon-btn d-flex justify-content-center align-items-center"><i class="fab fa-facebook-f"></i></span></a></li>
-                <li><a href="https://www.instagram.com/bestcar.llc/?igshid=Zjc2ZTc4Nzk%3D" target="_blank"><span class="social-icon-btn d-flex justify-content-center align-items-center"><i class="fab fa-instagram"></i></span></a></li>
+                <li class="header-social-group d-flex justify-content-end">
+                    <a href="https://www.facebook.com/bestcarllcyerevan?mibextid=LQQJ4d" target="_blank"><span class="social-icon-btn d-flex justify-content-center align-items-center"><i class="fab fa-facebook-f"></i></span></a>
+                    <a href="https://www.instagram.com/bestcar.llc/?igshid=Zjc2ZTc4Nzk%3D" target="_blank"><span class="social-icon-btn d-flex justify-content-center align-items-center"><i class="fab fa-instagram"></i></span></a>
+                </li>
+
             </ul>
         </div>
     </div>
@@ -157,9 +160,9 @@
                                         <span class="single" style="transition-delay: 1s;">ց</span>
                                     </h2>
                                     <p>
-                                        Ավտոաճուրդի և մեքենայի ձեռք բերման վերաբերյալ <br> խորհրդատվության տրամադրում
+                                        Աճուրդի մասնակցության և գնման ողջ <br> գործընթացի իրականացում
                                     </p>
-                                    <a href="#our-services" class="get-in-touch-btn">Ծառայություններ</a>
+                                    <a href="tel:033185050" class="get-in-touch-btn">Զանգահարել</a>
                                 </div>
                                 <div class="col-md-7"></div>
                             </div>
@@ -216,9 +219,9 @@
                                         <span class="single" style="transition-delay: 1s;">ց</span>
                                     </h2>
                                     <p>
-                                        Ավտոաճուրդի և մեքենայի ձեռք բերման վերաբերյալ <br> խորհրդատվության տրամադրում
+                                        Մեքենայի ապահով տեղափոխման <br> երաշխավորում
                                     </p>
-                                    <a href="#our-services" class="get-in-touch-btn">Ծառայություններ</a>
+                                    <a href="tel:033185050" class="get-in-touch-btn">Զանգահարել</a>
                                 </div>
                                 <div class="col-md-7"></div>
                             </div>
@@ -340,11 +343,19 @@
     });
     $('.top-menu a,.get-in-touch-btn').click(function(){
         $('html, body').animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top
+            scrollTop: $( $.attr(this, 'href') ).offset().top - 80
         }, 1000);
         return false;
     });
-
+    if ($("body")[0]) {
+        $(window).scroll(function(event) {
+            var scroll = $(window).scrollTop();
+            $('header ').toggleClass('fixed-header',
+                //add 'ok' class when div position match or exceeds else remove the 'ok' class.
+                scroll >= $('.top-section-overlay').offset().top + 150
+            );
+        });
+    }
 </script>
 
 </body>
