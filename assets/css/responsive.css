@@ -75,6 +75,9 @@
     .project-tags{
         display: none;
     }
+    .top-section-overlay header .wrapper{
+        padding: 0 10px;
+    }
 }
 @media only screen and (max-width: 575px) {
     .upper-header .header-social-group{
